@@ -36,6 +36,7 @@ function App() {
                 title={project.title}
                 description={project.description}
                 tech={project.tech}
+                github={project.github}
               />
             ))}
           </div>

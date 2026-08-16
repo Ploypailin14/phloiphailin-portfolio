@@ -11,7 +11,7 @@ const projects = [
     title: "My Porfile",
     description: "A personal portfolio website built with React.",
     tech: ['React', 'Vite', 'JavaScript'],
-    github: 'https://github.com/Ploypailin14/my-profile'
+    github: 'https://github.com/Ploypailin14/phloiphailin-portfolio'
   },
 ]
 

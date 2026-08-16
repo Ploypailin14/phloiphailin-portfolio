@@ -222,44 +222,45 @@ body {
   7.ProjectCard
 ================================================================*/
 
-.project-card {
-  padding: 28px;
-
-  background: white;
-
-  border: 1px solid #e5e7eb;
-
-  border-radius: 16px;
-
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
 }
 
-.project-card h2 {
-  margin-top: 0;
-
-  font-size: 22px;
-}
-
-.project-card p {
-  color: #6b7280;
-
-  line-height: 1.6;
-}
-
-.project-card span {
-  display: inline-block;
-
-  margin-top: 10px;
-
+.project-tech span {
   padding: 6px 12px;
 
   background: #ede9fe;
-
   color: #6d28d9;
 
   border-radius: 20px;
 
   font-size: 14px;
+  font-weight: 500;
+}
+
+.github-button {
+  display: inline-block;
+
+  margin-top: 20px;
+  padding: 10px 18px;
+
+  background: #1f2937;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: background 0.2s;
+}
+
+.github-button:hover {
+  background: #111827;
 }
 
 /* ==============================================================
