@@ -1,4 +1,4 @@
-function ProjectCard({ title, description, tech, github }) {
+function ProjectCard({ title, description, tech, github}) {
   return (
     <article className="project-card">
       <h2>{title}</h2>
@@ -10,7 +10,7 @@ function ProjectCard({ title, description, tech, github }) {
           <span key={item}>{item}</span>
         ))}
       </div>
-      
+
       {github && (
         <a
           href={github}
