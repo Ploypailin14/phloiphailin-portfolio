@@ -1,7 +1,6 @@
 function Hero({name, role}) {
   return (
     <section className="hero">
-      <p className="helo-greeting">Hello, I'm</p>
 
       <h1>{name}</h1>
       <h2>{role}</h2>
