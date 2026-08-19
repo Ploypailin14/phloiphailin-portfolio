@@ -114,6 +114,38 @@ body {
   background: #6d28d9;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero-github-button {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  background: white;
+  color: #7c3aed;
+
+  border: 1px solid #7c3aed;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.hero-github-button:hover {
+  background: #7c3aed;
+  color: white;
+}
+
 /* ===============================================================
   4.About
 ================================================================*/
@@ -195,31 +227,69 @@ body {
 ================================================================*/
 
 .projects-section {
-  max-width: 1100px;
-
+  max-width: 500px;
   margin: 0 auto;
+  padding: 100px 20px;
 
-  padding: 80px 20px;
+  text-align: center;
 }
 
-.projects-section > h1 {
-  text-align: center;
-
+.projects-section h1 {
   font-size: 40px;
-
   margin-bottom: 40px;
 }
 
-.projects-grid {
-  display: grid;
+/* ==============================================================
+  7.Contact
+================================================================*/
 
-  grid-template-columns: repeat(2, 1fr);
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 20px;
 
-  gap: 24px;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 40px;
+  margin: 10px 0 20px;
+}
+
+.contact-description {
+  max-width: 600px;
+  margin: 0 auto;
+
+  color: #6b7280;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.contact-button {
+  display: inline-block;
+
+  margin-top: 30px;
+  padding: 12px 24px;
+
+  background: #7c3aed;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.contact-button:hover {
+  background: #6d28d9;
 }
 
 /* ==============================================================
-  7.ProjectCard
+  8.ProjectCard
 ================================================================*/
 
 .project-tech {
@@ -264,7 +334,7 @@ body {
 }
 
 /* ==============================================================
-  8.Dark Mode
+  9.Dark Mode
 ================================================================*/
 
 /* Navbar */
@@ -274,7 +344,7 @@ body {
 
 
 /* ==============================================================
-  9.Responsive
+  10.Responsive
 ================================================================*/
 
 /* Navbar */

@@ -7,19 +7,20 @@ function About() {
         <h1>About Me</h1>
 
         <p>
-          Hello! I'm Phloiphailin Khampuk, a Computer Engineering
-          student at Mae Fah Luang University.
+          I am a Computer Science student at Mae Fah Luang University
+          with an interest in Front-end Development and UI/UX Design.
         </p>
 
         <p>
-          I'm interested in Front-end Development and enjoy building
-          websites and user interfaces.
+          I enjoy creating modern, responsive, and user-friendly
+          web applications. I am continuously improving my skills
+          and learning new technologies.
         </p>
 
         <p>
-          Currently, I'm learning React, JavaScript, and modern
-          web development technologies to prepare for my internship
-          and future career as a Front-end Developer.
+          I am currently looking for a Front-end Developer internship
+          opportunity where I can gain real-world experience, work
+          with a development team, and continue growing as a developer.
         </p>
       </div>
     </section>

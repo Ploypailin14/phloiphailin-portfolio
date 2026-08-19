@@ -5,6 +5,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'  
 import ProjectCard from './components/ProjectCard'
+import Contact from './components/Contact'
+
 {/*data*/}
 import projects from './data/projects'
 
@@ -41,6 +43,8 @@ function App() {
             ))}
           </div>
         </section>
+
+      <Contact/>
     </main>
     </>
   )
