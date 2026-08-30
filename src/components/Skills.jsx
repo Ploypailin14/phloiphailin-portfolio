@@ -1,51 +1,121 @@
 function Skills() {
   const currentSkills = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Vue.js',
-    'Git',
-    'GitHub',
+    {
+      name: 'HTML',
+      icon: 'fa-brands fa-html5',
+    },
+    {
+      name: 'CSS',
+      icon: 'fa-brands fa-css3-alt',
+    },
+    {
+      name: 'JavaScript',
+      icon: 'fa-brands fa-js',
+    },
+    {
+      name: 'React',
+      icon: 'fa-brands fa-react',
+    },
+    {
+      name: 'Vue.js',
+      icon: 'fa-brands fa-vuejs',
+    },
+    {
+      name: 'Git',
+      icon: 'fa-brands fa-git-alt',
+    },
+    {
+      name: 'GitHub',
+      icon: 'fa-brands fa-github',
+    },
   ]
 
   const learningSkills = [
-    'TypeScript',
-    'Tailwind CSS',
-    'Node.js',
-    'PostgreSQL',
+    {
+      name: 'TypeScript',
+      icon: 'fa-solid fa-code',
+    },
+    {
+      name: 'Tailwind CSS',
+      icon: 'fa-solid fa-wind',
+    },
+    {
+      name: 'Node.js',
+      icon: 'fa-brands fa-node-js',
+    },
+    {
+      name: 'PostgreSQL',
+      icon: 'fa-solid fa-database',
+    },
   ]
 
   return (
     <section id="skills" className="skills-section">
-      <p className="section-label">MY SKILLS</p>
 
-      <h1>Skills</h1>
+      {/* Header */}
+      <div className="skills-header">
+        <p className="section-label">MY SKILLS</p>
 
-      {/*ใช้ map function เพื่อวนลูปผ่าน array ของ skills และสร้าง span สำหรับแต่ละ skill*/}
+        <h1>
+          My technical
+          <span>toolkit.</span>
+        </h1>
+      </div>
+
+
+      {/* Currently Using */}
       <div className="skills-group">
-        <h2>Currently Using</h2>
+
+        <div className="skills-group-title">
+          <span className="title-line"></span>
+          <h2>Currently Using</h2>
+        </div>
 
         <div className="skills-container">
+
           {currentSkills.map((skill) => (
-            <span className="skill-item" key={skill}>
-              {skill}
-            </span>
+            <div
+              className="skill-card"
+              key={skill.name}
+              title={skill.name}
+            >
+              <i className={skill.icon}></i>
+
+              <span>{skill.name}</span>
+            </div>
           ))}
+
         </div>
+
       </div>
 
-       <div className="skills-group">
-        <h2>Currently Learning</h2>
+
+      {/* Currently Learning */}
+      <div className="skills-group">
+
+        <div className="skills-group-title">
+          <span className="title-line"></span>
+          <h2>Currently Learning</h2>
+        </div>
 
         <div className="skills-container">
+
           {learningSkills.map((skill) => (
-            <span className="skill-item" key={skill}>
-              {skill}
-            </span>
+            <div
+              className="skill-card learning-card"
+              key={skill.name}
+              title={skill.name}
+            >
+              <i className={skill.icon}></i>
+
+              <span>{skill.name}</span>
+            </div>
           ))}
+
         </div>
+
       </div>
+
     </section>
   )
 }

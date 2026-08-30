@@ -15,11 +15,11 @@ function App() {
     <>
     <Navbar/>
 
-    {/*ส่ง props ไปยัง Hero component*/}
+    {/*ส่ง props ไปยัง Home component*/}
     <main>
       <Hero 
         name="Phloiphailin Khampuk"
-        role="Front-end Developer"
+        role="Front-end Development"
       />
 
       <About/>
