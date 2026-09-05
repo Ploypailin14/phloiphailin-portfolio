@@ -1,55 +1,70 @@
+import profileImage from '../assets/profile.jpg';
+
 function Hero({ name, role }) {
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero-section">
 
-      {/* Left Side */}
+      {/* LEFT SIDE */}
       <div className="hero-content">
 
-        <p className="hero-greeting">
-          Hello, I'm
-        </p>
+        <div className="hero-text">
 
-        <h1 className="hero-name">
-          {name}
-        </h1>
+          <p className="hero-greeting">
+            Hello, I'm
+          </p>
 
-        <div className="hero-role">
-          <span className="role-dot"></span>
-          {role}
-        </div>
+          <h1 className="hero-name">
+            Phloiphailin Khampuk
+          </h1>
 
-        <p className="hero-description">
+          <div className="hero-role">
+            <span className="role-dot"></span>
+            {role}
+          </div>
+
+          <p className="hero-description">
             Computer Engineering student at Mae Fah Luang University
-            passionate about Front-end Development.I enjoy building modern and user-friendly web applications.
-        </p>
+            passionate about Front-end Development. I enjoy building
+            modern and user-friendly web applications.
+          </p>
 
-        <div className="hero-buttons">
+          <div className="hero-buttons">
 
-          <a href="#projects" className="hero-button">
-            View My Projects
-            <span>↗</span>
-          </a>
+            <a href="#projects" className="hero-button">
+              View My Projects
+              <span>↗</span>
+            </a>
 
-          <a href="#contact" className="hero-contact-button">
-            Contact Me
-            <span>✉</span>
-          </a>
+            <a href="#contact" className="hero-contact-button">
+              Contact Me
+              <span>✉</span>
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
 
-      {/* Right Side */}
+      {/* RIGHT SIDE */}
       <div className="hero-visual">
 
-        {/* Glow */}
-        <div className="hero-glow"></div>
+        {/* Profile Image */}
+        <div className="profile-wrapper">
 
-        {/* Decorative Ring */}
-        <div className="hero-ring hero-ring-1"></div>
-        <div className="hero-ring hero-ring-2"></div>
-        <div className="hero-ring hero-ring-3"></div>
+          <div className="hero-ring hero-ring-1"></div>
+          <div className="hero-ring hero-ring-2"></div>
+          <div className="hero-ring hero-ring-3"></div>
+
+          <img
+            src={profileImage}
+            alt="Phloiphailin Khampuk"
+            className="profile-image"
+          />
+
+        </div>
+
 
         {/* Floating Code Card */}
         <div className="code-card">
@@ -102,7 +117,7 @@ function Hero({ name, role }) {
         <div className="cube cube-1"></div>
         <div className="cube cube-2"></div>
 
-        {/* Small particles */}
+        {/* Particles */}
         <span className="particle particle-1"></span>
         <span className="particle particle-2"></span>
         <span className="particle particle-3"></span>
@@ -111,7 +126,7 @@ function Hero({ name, role }) {
       </div>
 
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

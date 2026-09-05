@@ -3,30 +3,37 @@ function Skills() {
     {
       name: 'HTML',
       icon: 'fa-brands fa-html5',
+      className: 'html',
     },
     {
       name: 'CSS',
       icon: 'fa-brands fa-css3-alt',
+      className: 'css',
     },
     {
       name: 'JavaScript',
       icon: 'fa-brands fa-js',
+      className: 'javascript',
     },
     {
       name: 'React',
       icon: 'fa-brands fa-react',
+      className: 'react',
     },
     {
       name: 'Vue.js',
       icon: 'fa-brands fa-vuejs',
+      className: 'vue',
     },
     {
       name: 'Git',
       icon: 'fa-brands fa-git-alt',
+      className: 'git',
     },
     {
       name: 'GitHub',
       icon: 'fa-brands fa-github',
+      className: 'github',
     },
   ]
 
@@ -34,18 +41,22 @@ function Skills() {
     {
       name: 'TypeScript',
       icon: 'fa-solid fa-code',
+      className: 'typescript',
     },
     {
       name: 'Tailwind CSS',
       icon: 'fa-solid fa-wind',
+      className: 'tailwind',
     },
     {
       name: 'Node.js',
       icon: 'fa-brands fa-node-js',
+      className: 'node',
     },
     {
       name: 'PostgreSQL',
       icon: 'fa-solid fa-database',
+      className: 'postgresql',
     },
   ]
 
@@ -74,16 +85,15 @@ function Skills() {
         <div className="skills-container">
 
           {currentSkills.map((skill) => (
-            <div
-              className="skill-card"
-              key={skill.name}
-              title={skill.name}
-            >
-              <i className={skill.icon}></i>
-
-              <span>{skill.name}</span>
-            </div>
-          ))}
+          <div
+            className={`skill-card ${skill.className}`}
+            key={skill.name}
+            title={skill.name}
+          >
+            <i className={skill.icon}></i>
+            <span>{skill.name}</span>
+          </div>
+        ))}
 
         </div>
 
@@ -101,16 +111,15 @@ function Skills() {
         <div className="skills-container">
 
           {learningSkills.map((skill) => (
-            <div
-              className="skill-card learning-card"
-              key={skill.name}
-              title={skill.name}
-            >
-              <i className={skill.icon}></i>
-
-              <span>{skill.name}</span>
-            </div>
-          ))}
+          <div
+            className={`skill-card learning-card ${skill.className}`}
+            key={skill.name}
+            title={skill.name}
+          >
+            <i className={skill.icon}></i>
+            <span>{skill.name}</span>
+          </div>
+        ))}
 
         </div>
 
