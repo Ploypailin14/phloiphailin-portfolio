@@ -10,7 +10,7 @@ function Contact() {
       </p>
 
       <a
-        href="mailto:6631501181@lamduan.mfu.ac.th"
+        href="mailto:6631501081@lamduan.mfu.ac.th"
         className="contact-button"
       >
         Send Me an Email
