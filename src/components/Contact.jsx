@@ -31,7 +31,7 @@ function Contact() {
             type="email"
             id="email"
             name="email"
-            placeholder="your@email.com"
+            placeholder="ploypailinkumpook@gmail.com"
             required
           />
         </div>

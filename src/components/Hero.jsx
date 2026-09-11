@@ -1,20 +1,15 @@
-import profileImage from '../assets/profile.jpg';
+import profileImage from '../assets/profile.jpg'
 
-function Hero({ name, role }) {
+function Hero({ role = 'FRONT-END DEVELOPER' }) {
   return (
     <section id="home" className="hero-section">
-
-      {/* LEFT SIDE */}
       <div className="hero-content">
-
         <div className="hero-text">
-
-          <p className="hero-greeting">
-            Hello, I'm
-          </p>
+          <p className="hero-greeting">Hello, I'm</p>
 
           <h1 className="hero-name">
-            Phloiphailin Khampuk
+            Phloiphailin
+            <span>Khampuk</span>
           </h1>
 
           <div className="hero-role">

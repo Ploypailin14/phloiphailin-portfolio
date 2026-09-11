@@ -10,6 +10,16 @@ function Navbar() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+
+        <div className="nav-actions">
+        <a className="nav-icon" href="https://github.com/Ploypailin14" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i className="fa-brands fa-github" />
+        </a>
+        <a className="nav-icon" href="mailto:ploypailinkumpook@gmail.com" aria-label="Email">
+          <i className="fa-regular fa-envelope" />
+        </a>
+        <a className="nav-cta" href="#contact">Let's Connect <span>↗</span></a>
+      </div>
     </nav>
   )
 }
