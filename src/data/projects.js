@@ -1,9 +1,13 @@
+import pageroomReservationImage from '../assets/page-room-reservation.png'
+import pageprofileImage from '../assets/page-profile.png'
+
 const projects = [
   {
     id: 1,
     title: 'Temporary Room Reservation System',
     description: 'A web-based room reservation system for Mae Fah Luang University.',
     tech: ['Vue.js', 'Node.js', 'PostgreSQL'],
+    image: pageroomReservationImage,
     github: 'https://github.com/Pnt-CoMExE/Temporary-Room-Reservation-MFU'
   },
   {
@@ -11,6 +15,7 @@ const projects = [
     title: "My Portfolio",
     description: "A personal portfolio website built with React.",
     tech: ['React', 'Vite', 'JavaScript'],
+    image: pageprofileImage,
     github: 'https://github.com/Ploypailin14/phloiphailin-portfolio',
   },
 ]

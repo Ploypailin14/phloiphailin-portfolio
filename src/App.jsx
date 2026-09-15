@@ -38,6 +38,7 @@ function App() {
                 title={project.title}
                 description={project.description}
                 tech={project.tech}
+                image={project.image}
                 github={project.github}
               />
             ))}

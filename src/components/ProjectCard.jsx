@@ -1,85 +1,46 @@
-function ProjectCard({ title, description, tech, github }) {
+function ProjectCard({ title, description, tech, image, github }) {
   return (
     <article className="project-card">
 
-      {/* Project Preview */}
+      {/* Project image */}
       <div className="project-preview">
-        <div className="preview-window">
-
-          <div className="preview-top">
-            <span></span>
-            <span></span>
-            <span></span>
+        {image ? (
+          <img
+            src={image}
+            alt={`${title} screenshot`}
+            className="project-image"
+          />
+        ) : (
+          <div className="project-placeholder">
+            <span>&lt;/&gt;</span>
           </div>
-
-          <div className="preview-content">
-            <div className="preview-sidebar">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-
-            <div className="preview-main">
-              <div className="preview-heading"></div>
-
-              <div className="preview-cards">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-
-              <div className="preview-line"></div>
-              <div className="preview-line short"></div>
-            </div>
-          </div>
-
-        </div>
+        )}
       </div>
 
-
-      {/* Project Information */}
+      {/* Project information */}
       <div className="project-info">
-
-        <div className="project-header">
-
-          <h2>{title}</h2>
-
-          <span className="project-status">
-            Featured
-          </span>
-
-        </div>
-
+        <h2>{title}</h2>
 
         <p className="project-description">
           {description}
         </p>
 
-
-        {/* Technologies */}
         <div className="project-tech">
           {tech.map((item) => (
-            <span key={item}>
-              {item}
-            </span>
+            <span key={item}>{item}</span>
           ))}
         </div>
 
-
-        {/* GitHub */}
         {github && (
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="project-link"
+            className="github-button"
           >
-            View Project
-            <span>→</span>
+            View Project →
           </a>
         )}
-
       </div>
 
     </article>

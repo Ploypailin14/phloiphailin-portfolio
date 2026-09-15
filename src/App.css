@@ -1848,18 +1848,428 @@ body {
 /* ==============================================================
   6.Projects
 ================================================================*/
-
+/* ส่วนทั้งหมดของ Projects */
 .projects-section {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 100px 20px;
-
-  text-align: center;
+  margin-top: 90px;
 }
 
-.projects-section h1 {
-  font-size: 40px;
-  margin-bottom: 40px;
+
+/* หัวข้อ Projects */
+.projects-section > h1 {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+
+/* เส้นสีน้ำเงินใต้หัวข้อ */
+.projects-section > h1::after {
+  content: "";
+
+  display: block;
+
+  width: 58px;
+  height: 3px;
+
+  margin: 13px auto 0;
+
+  border-radius: 99px;
+
+  background: #2879ff;
+
+  box-shadow: 0 0 15px rgba(47, 125, 255, 0.5);
+}
+
+
+/* =========================================================
+   PROJECT GRID
+   ========================================================= */
+
+/* พื้นที่รวม Project ทั้งหมด */
+.projects-grid {
+  display: grid;
+
+  /* ตอนนี้ให้ Project เรียงลงมาเป็น 1 คอลัมน์ */
+  grid-template-columns: 1fr;
+
+  /* ระยะห่างระหว่างแต่ละ Project */
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+/* กล่องใหญ่ของแต่ละ Project */
+.project-card {
+  display: grid;
+
+  /*
+    ด้านซ้าย 44%
+    ด้านขวา 56%
+  */
+  grid-template-columns: 44% 56%;
+
+  /* ความสูงขั้นต่ำของ Card */
+  min-height: 340px;
+
+  /* ซ่อนส่วนที่เกินขอบ */
+  overflow: hidden;
+
+  /* เส้นขอบ */
+  border: 1px solid rgba(55, 132, 255, 0.33);
+
+  /* ทำมุมโค้ง */
+  border-radius: 21px;
+
+  /* พื้นหลัง */
+  background: linear-gradient(
+    105deg,
+    rgba(5, 16, 34, 0.94),
+    rgba(7, 20, 40, 0.8)
+  );
+
+  /* เงา */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   LEFT SIDE : PROJECT PREVIEW
+   ========================================================= */
+
+/* พื้นที่ด้านซ้ายของ Project */
+.project-preview {
+  min-height: 340px;
+
+  padding: 48px;
+
+  /* จัด Preview ให้อยู่ตรงกลาง */
+  display: grid;
+  place-items: center;
+
+  /* เส้นแบ่งระหว่างซ้ายกับขวา */
+  border-right: 1px solid rgba(55, 132, 255, 0.18);
+
+  /* พื้นหลัง */
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(32, 102, 222, 0.1),
+    transparent 62%
+  );
+}
+
+
+/* =========================================================
+   PREVIEW WINDOW
+   ========================================================= */
+
+/* หน้าต่างจำลองเว็บไซต์ */
+.preview-window {
+  width: 100%;
+
+  max-width: 350px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(72, 143, 255, 0.35);
+
+  border-radius: 13px;
+
+  background: #07152d;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.3),
+    0 0 35px rgba(26, 89, 197, 0.1);
+}
+
+
+/* =========================================================
+   PREVIEW TOP BAR
+   ========================================================= */
+
+/* แถบด้านบนของหน้าต่างจำลอง */
+.preview-top {
+  height: 25px;
+
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  border-bottom: 1px solid rgba(94, 143, 207, 0.15);
+
+  background: #0d2345;
+}
+
+
+/* จุดเล็ก ๆ ด้านบน */
+.preview-top span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #7185a6;
+}
+
+
+/* =========================================================
+   PREVIEW CONTENT
+   ========================================================= */
+
+/* เนื้อหาด้านใน Preview */
+.preview-content {
+  min-height: 180px;
+
+  display: grid;
+
+  /*
+    ซ้าย 58px
+    ที่เหลือเป็นพื้นที่หลัก
+  */
+  grid-template-columns: 58px 1fr;
+}
+
+
+/* Sidebar ของ Preview */
+.preview-sidebar {
+  padding: 18px 10px;
+
+  border-right: 1px solid rgba(94, 143, 207, 0.12);
+}
+
+
+/* เส้นจำลองใน Sidebar */
+.preview-sidebar div {
+  width: 28px;
+  height: 7px;
+
+  margin-bottom: 12px;
+
+  border-radius: 3px;
+
+  background: #1d467e;
+}
+
+
+/* =========================================================
+   PREVIEW MAIN
+   ========================================================= */
+
+/* ส่วนหลักของ Preview */
+.preview-main {
+  padding: 18px;
+}
+
+
+/* หัวข้อจำลอง */
+.preview-heading {
+  width: 55%;
+  height: 11px;
+
+  margin-bottom: 16px;
+
+  border-radius: 4px;
+
+  background: #3182ff;
+
+  box-shadow: 0 0 12px rgba(47, 125, 255, 0.2);
+}
+
+
+/* =========================================================
+   PREVIEW CARDS
+   ========================================================= */
+
+/* กล่องเล็ก ๆ 3 กล่อง */
+.preview-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+
+/* กล่องแต่ละใบ */
+.preview-cards div {
+  height: 52px;
+
+  border: 1px solid rgba(72, 143, 255, 0.18);
+
+  border-radius: 7px;
+
+  background: #0d2450;
+}
+
+
+/* เส้นข้อความจำลอง */
+.preview-line {
+  width: 90%;
+  height: 7px;
+
+  margin-top: 16px;
+
+  border-radius: 4px;
+
+  background: #263d5d;
+}
+
+
+/* เส้นสั้น */
+.preview-line.short {
+  width: 55%;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE : PROJECT INFORMATION
+   ========================================================= */
+
+/* ข้อมูล Project ด้านขวา */
+.project-info {
+  padding: 42px 44px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   PROJECT HEADER
+   ========================================================= */
+
+/* ชื่อ Project + สถานะ */
+.project-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 16px;
+}
+
+
+/* ชื่อ Project */
+.project-header h2 {
+  margin: 0;
+
+  max-width: 480px;
+
+  font-size: clamp(24px, 2.7vw, 35px);
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* สถานะ เช่น In Progress */
+.project-status {
+  flex: 0 0 auto;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(47, 125, 255, 0.55);
+
+  border-radius: 999px;
+
+  color: #58a0ff;
+
+  background: rgba(32, 92, 190, 0.12);
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+   ========================================================= */
+
+/* รายละเอียด Project */
+.project-description {
+  max-width: 570px;
+
+  margin: 18px 0;
+
+  color: #9eacc3;
+
+  line-height: 1.75;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+   ========================================================= */
+
+/* กลุ่ม Technology */
+.project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+/* Technology แต่ละตัว */
+.project-tech span {
+  padding: 7px 10px;
+
+  border: 1px solid rgba(72, 143, 255, 0.2);
+
+  border-radius: 8px;
+
+  color: #d1ddf1;
+
+  background: rgba(22, 50, 91, 0.5);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PROJECT LINK
+   ========================================================= */
+
+/* ปุ่ม / Link ดู Project */
+.project-link {
+  width: fit-content;
+
+  margin-top: 24px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #4b9aff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+/* ตอนเอาเมาส์ไปชี้ */
+.project-link:hover {
+  color: #ffffff;
 }
 
 /* ==============================================================
@@ -3296,6 +3706,186 @@ body {
 
   .project-header {
     flex-direction: column;
+  }
+
+}
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+/* ช่องด้านซ้ายของ Project Card */
+.project-preview {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  overflow: hidden;
+
+  background: #071225;
+  border-right: 1px solid rgba(55, 132, 255, 0.22);
+}
+
+/* รูป Screenshot ของ Project */
+.project-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+/* เวลาเอาเมาส์ไปวางบน Project */
+.project-card:hover .project-image {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+  display: grid;
+  grid-template-columns: 44% 56%;
+
+  min-height: 360px;
+  overflow: hidden;
+
+  border: 1px solid rgba(55, 132, 255, 0.35);
+  border-radius: 22px;
+
+  background: linear-gradient(
+    105deg,
+    rgba(5, 16, 34, 0.96),
+    rgba(7, 20, 40, 0.90)
+  );
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   PROJECT INFORMATION
+   ========================================================= */
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 48px 42px;
+  text-align: left;
+}
+
+.project-info h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.25;
+}
+
+.project-description {
+  margin: 0 0 24px;
+
+  color: #9fb7d8;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TECHNOLOGY BADGES
+   ========================================================= */
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 0 0 24px;
+}
+
+.project-tech span {
+  padding: 7px 12px;
+
+  border: 1px solid rgba(55, 132, 255, 0.28);
+  border-radius: 8px;
+
+  background: rgba(20, 54, 100, 0.45);
+  color: #c9dcff;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   PROJECT LINK
+   ========================================================= */
+
+.github-button {
+  width: fit-content;
+
+  margin-top: 4px;
+  padding: 10px 0;
+
+  color: #4d9aff;
+  background: transparent;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  transition: color 0.2s ease;
+}
+
+.github-button:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview {
+    min-height: 280px;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(55, 132, 255, 0.22);
+  }
+
+  .project-info {
+    padding: 32px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .project-preview {
+    min-height: 220px;
+  }
+
+  .project-info {
+    padding: 26px 22px;
+  }
+
+  .project-info h2 {
+    font-size: 23px;
+  }
+
+  .project-description {
+    font-size: 14px;
   }
 
 }
